@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <!-- CSS Code: Place this code in the document's head (between the 'head' tags) -->
+  <style>
+
+    table.GeneratedTable {
+      opacity: 0;
+      text-align: center;
+      vertical-align: top;
+      width: 20%;
+      background-color: #e66b19;
+      border-collapse: collapse;
+      border-width: 2px;
+      border-color: #000000;
+      border-style: groove;
+      color: #000000;
+      margin: 0;
+      position: absolute;
+      height: 20vh;
+      top: 70px;
+      right: 1420px;
+    }
+
+    table.GeneratedTable td, table.GeneratedTable th {
+      border-width: 2px;
+      border-color: #000000;
+      border-style: groove;
+      padding: 3px;
+    }
+
+    table.GeneratedTable thead {
+      background-color: #ffffff;
+    }
+
+  </style>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maze Game | Jack Partridge</title>
+  <script src="Libraries/p5.js"></script>
+  <script src="Libraries/p5.dom.js"></script>
+  <script src="runnable/sketch.js"></script>
+  <script src="runnable/Cell.js"></script>
+  <script src="runnable/mazeGeneration.js"></script>
+  <script src="runnable/depthFirstSearch.js"></script>
+  <script src="runnable/aStar.js"></script>
+  <script src="runnable/dijkstras.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</head>
+
+<body style="background-color:rgb(43,43,44);">
+  <main>
+    <table class="GeneratedTable" id = GeneratedTable>
+      <thead>
+      <tr>
+        <th>Algorithm</th>
+        <th>Colour</th>
+        <th>Time (ms)</th>
+        <th>Moves</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Dijkstra's</td>
+        <td>Yellow</td>
+        <td><p id="dsTimeTaken"></p></td>
+        <td><p id="djMoves"></p></td>
+      </tr>
+      <tr>
+        <td>A Star</td>
+        <td>Pink</td>
+        <td><p id="aTimeTaken"></p></td>
+        <td><p id="aMoves"></p></td>
+      </tr>
+      <tr>
+        <td>DFS</td>
+        <td>Blue</td>
+        <td><p id="timeTaken"></p></td>
+        <td><p id="dsMoves"></p></td>
+      </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+
+</html>
